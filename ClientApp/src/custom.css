@@ -1,0 +1,62 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: rosybrown;
+  text-decoration: none;
+}
+
+/*
+    DAD2D8
+    143642
+    0F8B8D
+    EC9A29
+
+*/
+
+body {
+    background-color: #DAD2D8;
+}
+
+a:hover {
+    color: #EC9A29;
+}
+
+a:active {
+    color: #EC9A29;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.pageTitle {
+    text-align: center;
+    color: rosybrown;
+}
+
+code {
+    color: #143642;
+}
+
+ul li {
+    list-style-type: none;
+    margin-right: 0.5em;
+    white-space: normal;
+
+}
+
+.bodyNav li {
+    list-style-type: none;
+    margin-right: 0.5em;
+    white-space: normal;
+    display: inline-block;
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid rosybrown;
+    align-items: center;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #143642;
+    border-color: #DAD2D8;
+}
