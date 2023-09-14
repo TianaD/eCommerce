@@ -13,7 +13,9 @@ a {
 */
 
 body {
-    background-color: #DAD2D8;
+    padding: 0px;
+    background-image: linear-gradient(90deg, #ffdfa4, #ffdfa4, #FFC2C2, #FFC2C2 );
+    background-repeat: no-repeat;
 }
 
 a:hover {

@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
-import { Row, Button, Col, Card, Container, NavDropdown, Nav } from 'react-bootstrap';
+import { Row, Button, Col, Card, Container, NavDropdown } from 'react-bootstrap';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CategoryModal from './CategoryModal';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Navbar from 'react-bootstrap/Navbar';
+//import Navbar from 'react-bootstrap/Navbar';
 import { Products } from "./Products";
+import { NavMenu } from "./NavMenu";
 
 export function Home() {
     const [categories, setCategories] = useState([]);
@@ -32,12 +33,7 @@ export function Home() {
     }
 
 
-    useEffect(function () {
-        var response = axios.get("https://localhost:7165/categories").then(res => {
-            console.log(res.data)
-            setCategories(res.data)
-        })
-    }, [])
+
 
     function handleProductDisplay(category) {
         setProductsDisplay(true)
@@ -55,6 +51,8 @@ export function Home() {
     })
     return (
         <>
+            <NavMenu />
+
             {categoriesHTML}
             {productDisplay && <Products selectedCategory={selectedCategory} />}
             <CategoryModal
