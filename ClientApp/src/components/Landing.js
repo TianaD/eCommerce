@@ -65,7 +65,6 @@ export function Landing() {
                         <div class="nav__toggle" id="nav-toggle">
                             <ion-icon name="reorder-two-outline"></ion-icon>
                         </div>
-                        <BiHomeAlt2/>
                         <div class="nav__icon-left">
                             <a href="lightIndex.html" class="nav__icon-home"><ion-icon name="home-outline"></ion-icon></a>
                             <a href="#" class="nav__logo">Fashion</a>

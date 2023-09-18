@@ -32,7 +32,14 @@ export function Home() {
         backgroundColor: "#DAD2D8",
     }
 
+    useEffect(function () {
+        axios.get("https://localhost:7165/categories").then((response) => {
+            console.log(response.data)
+            setCategories(response.data)
+        })
 
+
+    }, [])
 
 
     function handleProductDisplay(category) {
@@ -49,6 +56,7 @@ export function Home() {
 
         )
     })
+    console.log(categories)
     return (
         <>
             <NavMenu />
